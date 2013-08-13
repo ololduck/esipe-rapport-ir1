@@ -6,6 +6,7 @@
 \usepackage{lmodern}
 \usepackage{graphicx}
 \usepackage{parskip}
+\usepackage{float}
 \usepackage[colorlinks = true,
             linkcolor = blue,
             urlcolor  = blue,
@@ -14,6 +15,8 @@
 
 \newcommand{\git}{\texttt{git}}
 \renewcommand{\familydefault}{\sfdefault}
+
+\floatplacement{figure}{H}
 
 \addtolength{\parskip}{\baselineskip}
 \setlength{\parindent}{15pt}
@@ -28,10 +31,11 @@
 Dans le cadre de ma formation en apprentissage, j'ai été embauché chez Ullink, une jeune société dans le domaine de la finance.
 
 Nous allons détailler cette année en entreprise en voyant dans un premier temps une présentation de cette société et du monde dans lequel elle évolue, puis nous expliquerons la place que nous occupons dans cette société, et nous terminerons par un bilan humain et professionnel.
-
 \pagebreak
+
 \tableofcontents
 \pagebreak
+
 \section{Ullink}
 \subsection{Présentation}
 Ullink est une société éditrice de logiciels dont le domaine est dans le secteur de la finance des marchés. Elle fournit à ses clients les moyens de se connecter à tous les marchés boursiers, et d'y placer des ordres. Ullink compte parmis ses clients de grandes sociétés internationales, comme des banques, des sociéts investissement, etc\dots
@@ -46,7 +50,7 @@ L'entreprise compte maintenant plus de 250 clients répartis partout dans le mon
 
 Ullink est pleine croissance, comme le montre l'évolution de son chiffre d'affaire comme le montre la figure~\ref{ca_ullink}.
 
-\begin{figure}[!h]
+\begin{figure}
 \includegraphics[width=\textwidth]{ca_ullink.png}
 \caption{Evolution du chiffre d'affaire d'Ullink depuis sa création}
 \label{ca_ullink}
@@ -54,7 +58,29 @@ Ullink est pleine croissance, comme le montre l'évolution de son chiffre d'affa
 
 \subsection{Les marchés financiers}
 
-ici parler des marchés.
+Les marchés financiers sont des organisations permettant l'echange et la régulation de valeurs abstraites. Ces valeurs peuvent être des titres, comme des actions dans une entreprise, ou des marchandises réelles, comme le pétrole, le blé, etc.
+
+Quelques exemples de marchés sont \emph{EURONEXT}, \emph{CME}.
+
+\subsubsection{Les acteurs des marchés financiers}
+
+Il existe plusieurs acteurs dans les marchés financiers. Principalement, il y a les Buy side, c'est à dire les banques, les fonds d'investissement, etc\dots  qui emploient différents traders, charger de planifier des ordres. Leur pendant est les Sell side, aussi appellés \emph{brokers}. Ce sont ceux qui ont un accès au marchés, et qui vont effectuer les ordres du Buy side.
+
+En l'absence de précisions de la part du buy side, les brokers peuvent très bien séparer un ordre sur plusieurs marchés.
+
+\begin{figure}
+\includegraphics[width=\textwidth]{market_actors.png}
+\caption{Les acteurs}
+\label{market_actors}
+\end{figure}
+
+\subsubsection{Les différentes actions possibles sur les marchés}
+
+Il existe un très grand nombre d'actions possibles sur un marché, ainsi que de types de valeurs, c'est d'ailleurs ce qui fait toute la complexité du trading. Il existe plusieurs type de valeurs échangeable, comme les \emph{equity}, qui représentent des marchandises réelles (\emph{ex: j'achète du pétrole}), et les \emph{derivatives}, qui représente une action dérivée d'une marchandise (\emph{ex: j'achète le droit de vendre du pétrole dans 3 mois}). Il en existe d'autres.
+
+Une action de vente ou d'achat standard sur un marché est appellé \emph{trade}.
+
+Pour le moment, Ullink ne supporte que les equity et les trade.
 
 \subsection{Produits}
 
@@ -92,7 +118,7 @@ Ullink propose ses produits sous la forme d'un service managé, c'est à dire g�
 
 \subsection{Organisation}
 
-Ullink est divisé en quatre départements majeurs:
+Ullink est divisé en quatre départements majeurs (figure~\ref{depts_ullink}):
 
 \begin{itemize}
 \item Produits\\
@@ -108,7 +134,7 @@ Secteur marketing, vision stratégique...
 Comptabilité, RH, direction, IT interne.
 \end{itemize}
 
-\begin{figure}[!h]
+\begin{figure}
 \includegraphics[width=\textwidth]{orga_deps_client.png}
 \caption{Les départements chez Ullink}
 \label{depts_ullink}
@@ -145,22 +171,35 @@ Une semi-automatisation des tâches de maintenance sur les nodes a également é
 
 Enfin, une automatisation plus poussée du processus de release a été développé par Sébastien.
 
-\section{Humain après tout}
+\section{Humains après tout}
+
+\subsection{Management}
 
 Ullink accorde une grande place à l'humain. En effet, de part l'utilisation de la méthode de développement SCRUM\footnote{\url{http://fr.wikipedia.org/wiki/Scrum_\%28m\%C3\%A9thode\%29}}, les équipes sont invitées à être auto-organisées, et si possible auto-géréees.
 
 Dans le cas de l'équipe des Product Tools, cela signifie que c'est à nous d'identifier les axes d'amélioration, et de proposer un plan d'action. Nous sommes également ammenés à communiquer avec les autres équipes pour récolter leurs besoins. Il nous arrive ainsi de travailler avec une (ou plusieurs) autre(s) équipe(s), et d'appliquer le scrum avec le(s) scrum master concerné(s).
 
-\section*{Conclusion}
+% Ces éléments impliquent une bonne motivation de la part de tout le monde, ce pourquoi Ullink embauche dans l'équipe Produit uniquement des ingénieurs, avec le statut de cadre. De plus, de nombreux éléments sont mis en place afin d'encourager les gens à travailler, comme les cafés et viennoiseries gratuites avant 9h du matin, le repas payé par l'entreprise si l'employé est présent après 20h.
 
 \pagebreak
+\section*{Conclusion}
+
+Ullink est une entreprise encore jeune, pleine de dynamisme. Elle se donne les moyens de réussir, même si elle demande beaucoup de ses employés. Sa plus grande réussite est selon moi d'avoir réussi à donner le sentiment qu'on peut faire bouger les choses, en tant qu'individu.
+
+Cependant, Ullink n'est plus une startup; elle a grandit, et atteint maintenant un point où ces mécanismes d'auto-gestion ne suffisent plus à faire collaborer des centaines d'employés. Les gens disposant de la connaissance des débuts de l'entreprise et maîtrisant complètement leur produit commencent à partir. Ullink va devoir changer si elle veut grandir.
+
+\pagebreak
+
 \part*{Annexes}
-\begin{figure}[!h]
+
+\begin{figure}
 \includegraphics[width=525pt, angle=90]{dep_product_orga.png}
 \caption{Organigramme département Produits}
 \label{Product_dpts_orga}
 \end{figure}
+
 \pagebreak
+
 \include{back_page}
 
 \end{document}
