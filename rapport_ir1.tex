@@ -1,4 +1,4 @@
-\documentclass[a4paper, 11pt]{article}
+\documentclass[a4paper, 12pt]{article}
 \usepackage[frenchb]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -6,24 +6,28 @@
 \usepackage{lmodern}
 \usepackage{graphicx}
 \usepackage{parskip}
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+\usepackage[section]{placeins}
 
+\newcommand{\git}{\texttt{git}}
 \renewcommand{\familydefault}{\sfdefault}
+
 \addtolength{\parskip}{\baselineskip}
 \setlength{\parindent}{15pt}
 \graphicspath{{images/}}
-
-\author{Paul Ollivier\\
-\texttt{contact@paulollivier.fr}}
-\title{Trouver un titre qui claque}
-\date{\today}
-
 \begin{document}
-\maketitle
+\include{title_page}
 \pagebreak
+\include{todo}
 
 \section*{Introduction}
 
-Ici écrire l'introduction
+
+
 \pagebreak
 \tableofcontents
 \pagebreak
@@ -39,9 +43,17 @@ Ullink est donc une entreprise poly culturelle, employant environ 300 personnes,
 
 L'entreprise compte maintenant plus de 250 clients répartis partout dans le monde, et assure donc un support technique 24h/24 et 5j/7, en fonction des horaires des marchés financiers.
 
-Ullink est pleine croissance, comme le montre l'évolution de son chiffre d'affaire:
+Ullink est pleine croissance, comme le montre l'évolution de son chiffre d'affaire comme le montre la figure~\ref{ca_ullink}.
 
+\begin{figure}[!h]
 \includegraphics[width=\textwidth]{ca_ullink.png}
+\caption{Evolution du chiffre d'affaire d'Ullink depuis sa création}
+\label{ca_ullink}
+\end{figure}
+
+\subsection{Les marchés financiers}
+
+ici parler des marchés.
 
 \subsection{Produits}
 
@@ -95,7 +107,7 @@ Secteur marketing, vision stratégique...
 Comptabilité, RH, direction, IT interne.
 \end{itemize}
 
-\begin{figure}
+\begin{figure}[!h]
 \includegraphics[width=\textwidth]{orga_deps_client.png}
 \caption{Les départements chez Ullink}
 \label{depts_ullink}
@@ -105,7 +117,7 @@ Comptabilité, RH, direction, IT interne.
 
 \subsection{Situation}
 
-Je suis dans le département produit. Je forme avec mon camarade Sébastien ANTOINE, en IR3, l'équipe des Product tools\footnote{Renommée Build sur l'organigramme du département Produit en annexe.}. Nous sommes basés à Paris, dans un Open Space situé dans un immeuble du \textsc{\romannumeral 9}\textsuperscript{e}~arrondissement (voir Annexe).
+Je suis dans le département produit. Je forme avec mon camarade Sébastien ANTOINE, en IR3, l'équipe des Product tools\footnote{Renommée Build sur l'organigramme du département Produit en annexe (figure~\ref{Product_dpts_orga}).}. Nous sommes basés à Paris, dans un Open Space situé dans un immeuble du \textsc{\romannumeral 9}\textsuperscript{e}~arrondissement (voir Annexe).
 
 Cette équipe se charge du développement et du maintien de l'environnement de travail propre au département Produit.
 
@@ -124,21 +136,30 @@ Ainsi, nous gérons la répartition des esclaves Jenkins parmis les différentes
 
 \subsubsection{Développement}
 
-\section{Economique et Humain}
+Bien qu'une infrastructure soit déjà en place, des efforts pour migrer vers des outils plus puissants et/ou modernesdoivent être fait. Nous avons rejoint l'effort global pour migrer de \texttt{cvs} vers \git, ce qui rend une bonne partie des systèmes actuellement utilisés obsolètes. Ainsi, nous avons participé à la décision d'un nouveau workflow, plus adapté au spécificités de \git, installé les différents outils logiciels permettant l'usage du workflow.
 
-\pagebreak
+Par la suite, nous avons rédigé une documentation interne sur l'usage de \git. De plus, nous avons animé des formations \git à destination des équipes produit.
+
+Une semi-automatisation des tâches de maintenance sur les nodes a également été développé, permettant une réduction du temps consacré à la maintenance afin de se concentrer davantage sur le développement.
+
+Enfin, une automatisation plus poussée du processus de release a été développé par Sébastien.
+
+\section{Humain après tout}
+
+Ullink accorde une grande place à l'humain. En effet, de part l'utilisation de la méthode de développement SCRUM\footnote{\url{http://fr.wikipedia.org/wiki/Scrum_\%28m\%C3\%A9thode\%29}}, les équipes sont invitées à être auto-organisées, et si possible auto-géréees.
+
+Dans le cas de l'équipe des Product Tools, cela signifie que c'est à nous d'identifier les axes d'amélioration, et de proposer un plan d'action. Nous sommes également ammenés à communiquer avec les autres équipes pour récolter leurs besoins. Il nous arrive ainsi de travailler avec une (ou plusieurs) autre(s) équipe(s), et d'appliquer le scrum avec le(s) scrum master concerné(s).
+
 \section*{Conclusion}
 
 \pagebreak
-\section*{Annexes}
-\subsection*{Organigramme département Produits}
-\includegraphics[width=\textheight, angle=90]{dep_product_orga.png}
-
+\part*{Annexes}
+\begin{figure}[!h]
+\includegraphics[width=525pt, angle=90]{dep_product_orga.png}
+\caption{Organigramme département Produits}
+\label{Product_dpts_orga}
+\end{figure}
 \pagebreak
-\begin{center}
-\begin{abstract}
-Ceci est l'abstract
-\end{abstract}
-\end{center}
+\include{back_page}
 
 \end{document}
