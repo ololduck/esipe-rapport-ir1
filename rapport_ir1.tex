@@ -1,4 +1,4 @@
-\documentclass[a4paper, 12pt]{article}
+\documentclass[a4paper, 11pt]{article}
 \usepackage[frenchb]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -7,6 +7,7 @@
 \usepackage{graphicx}
 \usepackage{parskip}
 
+\renewcommand{\familydefault}{\sfdefault}
 \addtolength{\parskip}{\baselineskip}
 \setlength{\parindent}{15pt}
 \graphicspath{{images/}}
@@ -44,24 +45,33 @@ Ullink est pleine croissance, comme le montre l'évolution de son chiffre d'affa
 
 \subsection{Produits}
 
-Ullink propose un ensemble de logiciels de trading électronique ayant pour cible l'ensemble des acteurs, aussi bien coté vente que achat. L'accent est mis sur la robustesse et l'extensibilité.
+Ullink propose un ensemble de logiciels de trading électronique ayant pour cible l'ensemble des acteurs, aussi bien sell-side que buy-side. L'accent est mis sur la robustesse et l'extensibilité.
 
 Trois types de produits sont ainsi proposés, que nous allons voir dans les paragraphes suivants.
 
-\subsubsection{UL Desk}
+\subsubsection{Produits core}
 
-UL Desk est la solution front-end pour tous les professionnels du marché, surtout les actions complexes, comme répartir un ordre entre plusieurs marchés, etc. C'est une interface tout inclus permettant un niveau d'abstraction par rapport aux marchés.
+\paragraph{UL Bridge}
+
+UL Bridge permet la connexion client/marché(s) (DMA: Direct Market Access) ainsi que le routage des informations dans l'ensemble des produits des solutions Ullink
+
+\paragraph{UL Odysis}
+
+UL Odisys sert à gérer des ordres plus complexes, qui ne partirons pas directement sur les marchés, et serons traités par différents acteurs, avant de partir pour execution.
+
+\paragraph{UL Desk}
+UL Desk est la solution front-end principalement à destination des Traders et Brokers. Il facilite un bon nombre d'opérations, surtout les actions complexes, comme répartir un ordre entre plusieurs marchés, etc. C'est une interface tout inclus permettant un niveau d'abstraction par rapport aux marchés. Ses fonctionalités sont fournies par des extensions, comme ul-trader, pour les traders.
 
 \subsubsection{Solutions complémentaires}
 Un certain nombre d'autres composants logiciels sont disponibles pour offrir un ensemble de fonctionalités plus riche:
 
 \begin{itemize}
-\item{{\bf UL Bridge} permet la connexion client/marché(s) ainsi que le routage des informations dans l'ensemble des produits des solutions Ullink.}
-\item{{\bf UL Odisys}: effectue une gestoin des ordres passés aux marchés, comme l'éclatement d'un ordre sur plusieurs marchés.}
 \item{{\bf UL Smart} est une couche d'automatisation permettant l'automatisation des meilleures pratiques lors des passages d'ordres.}
 \item{{\bf UL Iris} implémente une gestion des risques avant le passage réel d'un ordre sur les marchés.}
 \item{{\bf UL Dashboard} permet d'avoir une vision d'ensemble de l'intégralité des activités réalisée sur la plateforme Ullink.}
 \end{itemize}
+
+Un certain nombre de plugins existent afin d'adapter le fonctionnement de ssolutions à différents workflows, et clients.
 
 \subsubsection{Hébergement}
 
@@ -85,25 +95,53 @@ Secteur marketing, vision stratégique...
 Comptabilité, RH, direction, IT interne.
 \end{itemize}
 
+\begin{figure}
+\includegraphics[width=\textwidth]{orga_deps_client.png}
+\caption{Les départements chez Ullink}
+\label{depts_ullink}
+\end{figure}
+
 \section{Activité au sein d'Ullink}
 
 \subsection{Situation}
 
-Je suis dans le département produit. Je forme avec mon camarade Sébastien ANTOINE, en IR3, l'équipe des Product tools. Nous sommes basés à Paris, dans un Open Space situé dans un immeuble du \textsc{\romannumeral 9}\textsuperscript{e}~arrondissement (voir Annexe 2).
+Je suis dans le département produit. Je forme avec mon camarade Sébastien ANTOINE, en IR3, l'équipe des Product tools\footnote{Renommée Build sur l'organigramme du département Produit en annexe.}. Nous sommes basés à Paris, dans un Open Space situé dans un immeuble du \textsc{\romannumeral 9}\textsuperscript{e}~arrondissement (voir Annexe).
 
 Cette équipe se charge du développement et du maintien de l'environnement de travail propre au département Produit.
 
-Lors des jeunes années d'Ullink, un environnement de travail basé sur de l'intégration continue a été mis en place. Cet environnement faisait usage de plusieurs outils open source, dont le désormais célèbre serveur Hudson, forké par la suite sous le nom Jenkins. Ce serveur interragissait avec un serveur CVS, via un plugin modifié installé sur Jenkins. Ce plugin se chargeait aussi de gérer les scripts ant, permettant la construction des solutions.
+Lors des jeunes années d'Ullink, un environnement de travail basé sur de l'intégration continue a été mis en place. Cet environnement faisait usage de plusieurs outils open source, dont le désormais célèbre serveur Hudson, forké par la suite sous le nom Jenkins. Ce serveur interragissait avec un serveur CVS, via un plugin modifié installé sur Jenkins. Ce plugin se chargeait aussi de gérer les scripts ant, permettant la construction des différentes solutions logicielles.
 
 Cependant, ce qui était simple s'est complexifié avec le temps, le nombre de produits grandissant, les solutions spécifiques à tel client. L'équipe des Product Tools a donc été créée dans ce but: assurer la maintenance, et l'amélioration de ce système.
 
-Dans ce cadre, nos sommes en contact avec toutes les différentes équipes produit.
+Dans ce cadre, nos sommes en contact avec toutes les différentes équipes du département Produit.
 
 \subsection{Missions}
+\subsubsection{Maintenance}
+
+Notre mission de maintenance est claire: s'assurer que tous les éléments de la chaîne d'intégration continue -et les outils associés- fonctionnent correctement, de la manière la plus transparente possible pour les utilisateurs (les équipes de développement).
+
+Ainsi, nous gérons la répartition des esclaves Jenkins parmis les différentes équipes et projets, installant ou retirant des esclaves si besoin. Nous nous occupons également des mises à jour des outils utilisés, et éventuellement de les optimiser.
+
+\subsubsection{Développement}
+
+\section{Economique et Humain}
 
 \pagebreak
+\section*{Conclusion}
+
+\pagebreak
+\begin{center}
+\section*{Annexes}
+\end{center}
+\pagebreak
+\subsection*{Organigramme département Produits}
+\includegraphics[width=\textheight, angle=90]{dep_product_orga.png}
+
+\pagebreak
+\begin{center}
 \begin{abstract}
 Ceci est l'abstract
 \end{abstract}
+\end{center}
 
 \end{document}
