@@ -153,9 +153,12 @@ Je suis dans le département produit. Je forme avec mon camarade Sébastien ANTO
 
 Cette équipe se charge du développement et du maintien de l'environnement de travail propre au département Produit, en vue de faciliter l'utilisation dudit environnement par les équipes Produit.
 
-Lors des jeunes années d'Ullink, un environnement de travail basé sur de l'intégration continue a été mis en place. Cet environnement faisait usage de plusieurs outils open source, dont le désormais célèbre serveur Hudson, repris par la suite sous le nom Jenkins. Ce serveur interagissait avec un serveur CVS (Concurrent Versionning System, un système de gestion de version), via un plugin personalisé par Ullink installé sur Jenkins. Ce plugin se chargeait aussi de gérer les scripts ant (automatisation de construction logicielle), permettant la construction des différentes solutions logicielles.
+Lors des jeunes années d'Ullink, un environnement de travail basé sur de l'intégration continue a été mis en place. Cet environnement faisait usage de plusieurs outils open source, dont le désormais célèbre serveur Hudson, repris par la suite sous le nom Jenkins\footnote{Serveur d'intégration continue se chargeant d'orchestrer la répartition des tâches sur plusieurs autres machines slaves \\
+\url{http://fr.wikipedia.org/wiki/Jenkins_\%28informatique\%29}}. Ce serveur interagissait avec un serveur CVS\footnote{Concurrent Versionning System, un système de gestion de version\\
+\url{http://fr.wikipedia.org/wiki/CVS}}, via un plugin personalisé par Ullink installé sur Jenkins. Ce plugin se chargeait aussi de gérer les scripts ant\footnote{Automatisation de construction logicielle\\
+\url{http://fr.wikipedia.org/wiki/Apache_Ant}}, permettant la construction des différentes solutions logicielles.
 
-Cependant, ce qui était simple s'est complexifié avec le temps, le nombre de produits grandissant, les solutions spécifiques à tel client. L'équipe des Product Tools a donc été créée dans le but d'assurer la maintenance, et l'amélioration de ce système.
+Cependant, ce qui était simple s'est complexifié avec le temps, le nombre de produits grandissant, les solutions spécifiques à tel client ou tel client aussi. L'équipe des Product Tools a donc été créée dans le but d'assurer la maintenance, et l'amélioration de ce système.
 
 Dans ce cadre, nos sommes en contact avec toutes les différentes équipes du département Produit.
 
@@ -168,7 +171,7 @@ Ainsi, nous gérons la répartition des esclaves Jenkins parmis les différentes
 
 \subsubsection{Développement}
 
-Bien qu'une infrastructure soit déjà en place, des efforts pour migrer vers des outils plus puissants et/ou modernes doivent être faits. Nous avons rejoint le groupe de travail cherchant à migrer de \texttt{cvs} vers \git, ce qui rend une bonne partie des systèmes actuellement utilisés obsolètes. Ainsi, nous avons participé à la définition et mise en place d'un nouveau workflow, plus adapté au spécificités de \git, installé les différents outils logiciels permettant l'usage du workflow.
+Bien qu'une infrastructure soit déjà en place, des efforts pour migrer vers des outils plus puissants et/ou modernes doivent être faits. Nous avons rejoint le groupe de travail cherchant à migrer de \texttt{cvs} vers \git\footnote{Autre système de gestion de version, plus récent, écrit par Linus Torvalds \url{http://fr.wikipedia.org/wiki/Git}}, ce qui rend une bonne partie des systèmes actuellement utilisés obsolètes. Ainsi, nous avons participé à la définition et mise en place d'un nouveau workflow, plus adapté au spécificités de \git, installé les différents outils logiciels permettant l'usage du workflow.
 
 Par la suite, nous avons rédigé une documentation interne sur l'usage de \git. De plus, nous avons animé des formations \texttt{git} à destination des équipes produit.
 
